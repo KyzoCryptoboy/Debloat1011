@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Debloat_1011
 {
@@ -53,6 +42,20 @@ namespace Debloat_1011
                 }
                 else
                 {
+                    Process Tprocess = new Process();
+                    Tprocess.StartInfo.FileName = "cmd.exe";
+                    Tprocess.StartInfo.RedirectStandardInput = true;
+                    Tprocess.StartInfo.RedirectStandardOutput = true;
+                    Tprocess.StartInfo.CreateNoWindow = true;
+                    Tprocess.StartInfo.UseShellExecute = false;
+                    Tprocess.Start();
+
+                    Tprocess.StandardInput.WriteLine("winget list");
+                    System.Threading.Thread.Sleep(1500);
+                    Tprocess.StandardInput.WriteLine("y");
+                    Tprocess.StandardInput.Flush();
+                    Tprocess.StandardInput.Close();
+
                     var progress = new Progress<double>(value =>
                     {
                         Progbar.Value = value;
@@ -145,6 +148,20 @@ namespace Debloat_1011
                 }
                 else
                 {
+                    Process Tprocess = new Process();
+                    Tprocess.StartInfo.FileName = "cmd.exe";
+                    Tprocess.StartInfo.RedirectStandardInput = true;
+                    Tprocess.StartInfo.RedirectStandardOutput = true;
+                    Tprocess.StartInfo.CreateNoWindow = true;
+                    Tprocess.StartInfo.UseShellExecute = false;
+                    Tprocess.Start();
+
+                    Tprocess.StandardInput.WriteLine("winget list");
+                    System.Threading.Thread.Sleep(1500);
+                    Tprocess.StandardInput.WriteLine("y");
+                    Tprocess.StandardInput.Flush();
+                    Tprocess.StandardInput.Close();
+
                     var progress = new Progress<double>(value =>
                     {
                         Progbar.Value = value;
@@ -313,7 +330,7 @@ namespace Debloat_1011
 
         private void btn_chrome_click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Install Chrome?", "Install?", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            if (MessageBox.Show("Install Chrome?\n(Not recommended for privacy!!!)", "Install?", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
             {
                 return;
             }

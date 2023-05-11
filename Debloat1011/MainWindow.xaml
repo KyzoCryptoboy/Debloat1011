@@ -31,7 +31,7 @@
 
                 </Border>
             </Border>
-            <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="95 40 0 0" FontSize="25">Windows 10</Label>
+            <Label VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 40 0 0" FontSize="25" FontWeight="Bold">Windows 10</Label>
             <Button x:Name="btn_MSapps" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="70,120,0,0" FontSize="17" Click="btn_MSapps_click">Remove MS Store Bloat</Button>
             <Button x:Name="btn_AllBloat" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="70,200,0,0" FontSize="17" Click="btn_AllBloat_click">Remove All Bloat</Button>
             <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 255 0 0" FontWeight="Bold" FontSize="14">(Includes Mail, Onedrive and MSedge)</Label>
@@ -45,7 +45,7 @@
                     <Label VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold">Install Other Browser</Label>
                 </Border>
             </Border>
-            
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1.6*"/>
@@ -67,6 +67,7 @@
 
                 </Grid.RowDefinitions>
 
+                <Label VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1" Margin="0,64,0,0" FontWeight="Bold">Our Choise!</Label>
                 <Button x:Name="btn_brave" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontSize="18" Click="btn_brave_click">Brave</Button>
                 <Button x:Name="btn_firefox" Grid.Column="3" Grid.Row="1" FontWeight="Bold" FontSize="18" Click="btn_firefox_click">Firefox</Button>
                 <Button x:Name="btn_waterfox" Grid.Column="5" Grid.Row="1" FontWeight="Bold" FontSize="18" Click="btn_waterfox_click">Waterfox</Button>
@@ -74,12 +75,20 @@
                 <Button x:Name="btn_operaGX" Grid.Column="3" Grid.Row="3" FontWeight="Bold" FontSize="18" Click="btn_operaGX_click">Opera GX</Button>
                 <Button x:Name="btn_chrome" Grid.Column="5" Grid.Row="3" FontWeight="Bold" FontSize="18" Click="btn_chrome_click">Chrome</Button>
             </Grid>
+        </Grid>
 
+        <Grid Grid.Row="0" Grid.RowSpan="3" Grid.Column="1">
+            <Border Width="300" Height="370" Background="Black">
+                <Border Width="285" Height="355" Background="White">
+                </Border>
+            </Border>
+            <Label VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 40 0 0" FontSize="25" FontWeight="Bold">Windows 11</Label>
+            <Label Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">Comming soon!</Label>
         </Grid>
 
         <Grid Grid.Row="5" Grid.ColumnSpan="2">
             <ProgressBar x:Name="Progbar" Height="30" Width="600" VerticalAlignment="Center" Maximum="100"></ProgressBar>
         </Grid>
-        
+
     </Grid>
 </Window>
