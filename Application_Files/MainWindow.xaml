@@ -83,7 +83,9 @@
                 </Border>
             </Border>
             <Label VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 40 0 0" FontSize="25" FontWeight="Bold">Windows 11</Label>
-            <Label Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">Comming soon!</Label>
+            <Button x:Name="btn_MSapps11" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="70,120,0,0" FontSize="17" Click="btn_MSapps11_click">Remove MS Store Bloat</Button>
+            <Button x:Name="btn_AllBloat11" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="70,200,0,0" FontSize="17" Click="btn_AllBloat11_click">Remove All Bloat</Button>
+            
         </Grid>
 
         <Grid Grid.Row="5" Grid.ColumnSpan="2">
